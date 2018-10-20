@@ -32,3 +32,10 @@ class StorePicker extends React.Component {
 
 comments in JSX done with { /* comment */ }
 curly brackets {} used for javascript in JSX
+
+can import stylesheets several different ways, including just 'importing' them:
+import './css/style.css';
+
+React knows this is not a javascript file, load in CSS, stick in style tag, and hot reload npm server when any changes are made
+
+Import components wherever you need them, if you have components in your Header then just import them in Header rather than main .js file
