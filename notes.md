@@ -57,3 +57,20 @@ stateless function components - if your component only has render method and pro
 
 const Header = props => (
 can destruct props to be named variables, e.g. const Header = ({tagline, age, name})
+
+Router is a component as well, setting matches for the URL and the component to be rendered:
+import React from 'react';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import StorePicker from './StorePicker';
+import App from './App';
+import NotFound from './NotFound';
+
+const Router = () => (
+    <BrowserRouter>
+        <Switch>
+            <Route exact path="/" component={StorePicker} /> // render StorePicker if root path
+            <Route path="/store/:storeId" component={App} /> // render App if store and a storeId is present
+            <Route component={NotFound} /> // otherwise, render the NotFound component
+        </Switch>
+    </BrowserRouter>
+)
