@@ -39,3 +39,6 @@ import './css/style.css';
 React knows this is not a javascript file, load in CSS, stick in style tag, and hot reload npm server when any changes are made
 
 Import components wherever you need them, if you have components in your Header then just import them in Header rather than main .js file
+
+props is kind of like an object of data that's passed in, an argument in a function
+<Header tagline="cool tagline props"/>
