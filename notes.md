@@ -41,4 +41,19 @@ React knows this is not a javascript file, load in CSS, stick in style tag, and 
 Import components wherever you need them, if you have components in your Header then just import them in Header rather than main .js file
 
 props is kind of like an object of data that's passed in, an argument in a function
+App.js:
 <Header tagline="cool tagline props"/>
+
+Header.js:
+<span>{this.props.tagline}</span>
+
+`this` refers to the instance of the Component
+
+$0 will show clicked item, $1 will show second last, $2 third, etc.
+$r shows component instance with props, helps to understand that a component is just an object
+
+stateless function components - if your component only has render method and prop types
+    - takes `props` as an argument, as there's no `this` with function
+
+const Header = props => (
+can destruct props to be named variables, e.g. const Header = ({tagline, age, name})
