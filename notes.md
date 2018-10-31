@@ -116,7 +116,7 @@ myInput = React.createRef();
 
 // this.props.history.push(route) saying "go to this route, where React will look for the corresponding component to render
 
-'methods that update state and state need to live in the same component'
+'methods that update state needs to live in the same component that state lives'
 
 use set state API to update state:
 
