@@ -75,6 +75,12 @@ const Router = () => (
 </BrowserRouter>
 )
 
+Understanding State:
+
+- an object that lives inside of a component that stores all the data that the component and some of its children need
+- 'single source of truth'
+-
+
 `ref` allows you to reference a DOM node on the page
 
 constructor method runs before the component is created, must call super(); first:
@@ -109,3 +115,15 @@ myInput = React.createRef();
     }
 
 // this.props.history.push(route) saying "go to this route, where React will look for the corresponding component to render
+
+'methods that update state and state need to live in the same component'
+
+use set state API to update state:
+
+- take a copy of the existing state, never want to reach into state and modify it directly (mutation)
+  - const fishes = {...this.state.fishes} // takes a copy of object, 'object spread' takes copy
+- add new fish to that fishes variable
+- set new fishes object to state with this.setState({}) passing in the piece of state that you wish to update
+  - this.setState({
+    fishes // if property&value are the same, you can just pass the property
+    })
